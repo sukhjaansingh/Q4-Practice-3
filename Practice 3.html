@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Functions and Events</title>
+</head>
+<body>
+	<div>
+		<br>Enter 1st number : <input type="number"id="num1"><br>
+
+		<br>Enter 2nd number : <input type="number"id="num2"><br>
+
+		<h1 id="add"></h1>
+		<h1 id="multiply"></h1>
+		<h1 id="divide"></h1>
+		<h1 id="subtract"></h1>
+
+		<br><button type="Submit" onclick="plus()">Add</button>
+		<button type="Submit" onclick="multiply()">Multiply</button><br>
+		<br><button type="Submit" onclick="divide()">Divide</button>
+		<button type="Submit" onclick="subtract()">Subtract</button>
+
+	</div>
+	<script>
+		
+		function plus(){
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		var sum = Number(num1)+Number(num2);
+	   	document.getElementById("add").innerHTML= ("The sum is : " + sum);
+	    }
+
+	   function multiply(){
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		var multiply = parseInt(num1 * num2);
+	   	document.getElementById("multiply").innerHTML= ("The product is : " + multiply);
+	    }
+
+	    function divide(){
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		var divide = parseInt(num1 / num2);
+	   	document.getElementById("divide").innerHTML= ("The quotient is : " + divide);
+	    }
+
+	    function subtract(){
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		var subtract = parseInt(num1 - num2);
+	   	document.getElementById("subtract").innerHTML= ("The difference is : " + subtract);
+	    }
+	</script>
+
+
+
+</body>
+</html>
